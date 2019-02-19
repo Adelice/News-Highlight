@@ -7,7 +7,7 @@ class Source:
         self.id =id
         self.name = name
         self.description = description
-        self.url = 'https://image.tmdb.org/t/p/w500/'+ url
+        self.url = url
         self.category = category
         self.language = language
         self.country=country

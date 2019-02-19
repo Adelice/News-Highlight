@@ -17,13 +17,13 @@ def index():
 
     title = 'Home - Welcome to The best News Highlight Review Website Online'
     return render_template('index.html', title = title, general=general_news, business=business_news,technology=technology_news,sports=sports_news)
-@app.route('/news/<int:news_id>')
-def news(id):
+@app.route('/source/<id>')
+def source(id):
 
     '''
     View news page function that returns the news details page and its data
     '''
     source = get_source(id)
-    title = f'{source.title}'
+    name = f'{source.name}'
 
-    return render_template('news.html',id = news_id, source=source)
+    return render_template('news.html',name = name,source=source)
