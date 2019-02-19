@@ -1,22 +1,47 @@
-{% extends 'base.html'%}
-<!-- Content block -->
+
+{% import 'macros.html' as macro%}
+{% extends 'bootstrap/base.html'%}
+
+         {% block styles%}
+        {{ super() }}
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        {% endblock %}
 {% block content %}
-<div class="container">
 
-    <!-- Poster background -->
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 url" style="background: url({{source.url}}) no-repeat center center">
-        </div>
 
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 source-details">
-            <h3>{{ source.name }}</h3>
+        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 heading">
+                        <h1> {{name}} </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for article in articles %}
+                    <div class="col-md-3 articles-details">
+                        <a href={{article.url}} target="_blank">
+                            <img src={{article.urlToImage}} alt="article image" height="200">
+                        </a>
+                        <div class="words">
+                            <h4> {{article.title}} </h4>
+                            <p>Author: {{article.author}} </p>
+                            <p>Published on {{article.publishedAt}}</p>
+                            <hr>
+                            <p> {{article.description}}...
+                                <a href={{article.url}} target="_blank">Read Full Article</a>
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+               </div>
 
-            <p class="description> {{ source.description }}</p>
+          
+            
             
 
 
         </div>
     </div>
 
-</div>
+
 {% endblock %}

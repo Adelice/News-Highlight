@@ -4,9 +4,29 @@
     <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 source-card">
            
             <li class="text-center">
-                <a href="/source/{{source.id}}">
-                    {{ source.name|truncate(150)}}</a><br>
-                    {{source.description}}
+                <h3>{{source.name}}</h3>
+                    
+                    <p >{{ source.description|truncate(150) }}
+                            <a href="/source/{{source.id}}" target="blank">load articles</a>
+                   </p>
+            </li>
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+{% macro displaySourceList(source_list) %}
+
+    {% for source in source_list %}
+    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 source-card">
+           
+            <li class="text-center">
+                <h3>{{source.name}}</h3>
+                    
+                    
+                    <p >{{source.description|truncate(150) }}
+                            <a href="/source/{{source.id}}">Visit Source</a><br>
+                            
+                   </p>
             </li>
         </div>
     {% endfor %}
