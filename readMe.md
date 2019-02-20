@@ -9,7 +9,7 @@ News highlight is a web app where a user can preview various news articles from 
 * Virtualenv
 * flask
 
-###SPECS
+### SPECS
 
 
 * The program should allow the user to see different sources of news
@@ -20,13 +20,13 @@ News highlight is a web app where a user can preview various news articles from 
 
 * Python3.6(Flask)
 
-###Link to live website
-####support and contact details
+### Link to live website
+#### support and contact details
 
 Having any issues?
 Email:nancytoniw@gmail.com
 
-#####Author
+##### Author
  By Nancy Umutoniwase
 ### License
 
