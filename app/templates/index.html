@@ -1,29 +1,39 @@
-
-{% import 'macros.html' as macro%}
 {% extends 'bootstrap/base.html'%}
+{% import 'macros.html' as macro%}
+
 {% block styles%}
         {{ super() }}
-        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Dosis|Fira+Sans|Laila|Ubuntu" rel="stylesheet">
 {% endblock %}
 
-    
 {% block content %}
+        <div class="col-md-12 heading">
+           <h1>NEWS HIGHLIGHT</h1>
+        </div>
+        <div class="col-md-12 general">   
       
-        <h3>general News </h3>
+         <h3>General News </h3>
+        </div> 
         <ul>
             {{ macro.displaySourceList(general)}}
         </ul>
-        
+        <div class="col-md-12 general">
         <h3> Business news </h3>
+        </div>
         <ul>
             {{ macro.displaySourceList(business)}}
         </ul>
+        <div class="col-md-12 general">
        
         <h3>Technology news</h3>
+        </div>
         <ul>
             {{ macro.displaySourceList(technology)}}
         </ul>
+        <div class="col-md-12 general">
         <h3>Sports news</h3>
+        </div>
         <ul>
             {{ macro.displaySourceList(sports)}}
         </ul>

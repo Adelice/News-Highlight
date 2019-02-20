@@ -1,0 +1,18 @@
+
+body{
+    background-color:lightcyan;
+}
+.heading{
+    background-color: aqua;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding:20px;
+}
+.general{
+    padding: 10px;
+    font-size:70px;
+    text-align:center;
+    background-color: lightcoral;
+    font-family: 'Dosis', sans-serif;
+}
