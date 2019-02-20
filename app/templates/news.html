@@ -1,10 +1,11 @@
-{% extends 'bootstrap/base.html'%}
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
 
          {% block styles%}
         {{ super() }}
-        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Dosis|Fira+Sans|Laila|Ubuntu" rel="stylesheet">
         {% endblock %}
 {% block content %}
         <div class ="article">
@@ -12,8 +13,8 @@
 
         <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 heading">
-                        <h1> {{name}} </h1>
+                    <div class="col-md-12 ">
+                       
                     </div>
                 </div>
                 <div class="row">

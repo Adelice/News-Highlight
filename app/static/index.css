@@ -36,3 +36,10 @@ a:hover{
     color:green;
     font-weight: bolder;
 }
+.article{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: lightcyan;
+}
+img{
+  display: flex;
+}
